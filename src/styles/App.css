@@ -1,0 +1,18 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+  padding: 1.5rem 0;
+}
+
+.section-heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}

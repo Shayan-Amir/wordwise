@@ -1,0 +1,27 @@
+.word-details {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.word-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.word-title {
+  font-size: 2rem;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.phonetic {
+  color: var(--text-muted);
+  margin: 0;
+}

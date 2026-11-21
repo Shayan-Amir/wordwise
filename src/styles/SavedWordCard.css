@@ -1,0 +1,33 @@
+.saved-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.saved-card.selected {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.saved-word {
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+
+.saved-part {
+  color: var(--accent);
+  font-style: italic;
+  margin-bottom: 0.4rem;
+}
+
+.saved-definition {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.saved-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}

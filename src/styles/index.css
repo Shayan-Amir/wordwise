@@ -1,0 +1,100 @@
+:root {
+  --accent: #4f46e5;
+  --accent-dark: #4338ca;
+  --accent-light: #eef2ff;
+  --text: #1f2937;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --danger: #b91c1c;
+  --background: #fafafa;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--background);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  margin: 0 0 0.5rem;
+}
+
+p {
+  margin: 0 0 0.75rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.primary-button,
+.secondary-button,
+.danger-button,
+.saved-button {
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+  transition: background 0.15s ease;
+}
+
+.primary-button {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.primary-button:hover {
+  background: var(--accent-dark);
+}
+
+.secondary-button {
+  background: var(--white);
+  color: var(--accent);
+}
+
+.secondary-button:hover,
+.saved-button:hover {
+  background: var(--accent-light);
+}
+
+.saved-button {
+  background: var(--accent-light);
+  color: var(--accent-dark);
+}
+
+.danger-button {
+  background: var(--white);
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.danger-button:hover {
+  background: #fef2f2;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 3px solid #a5b4fc;
+  outline-offset: 2px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

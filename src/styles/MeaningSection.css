@@ -1,0 +1,33 @@
+.meaning-section {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.part-of-speech {
+  font-style: italic;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.definition-list {
+  padding-left: 1.25rem;
+  margin: 0 0 0.75rem;
+}
+
+.definition-item {
+  margin-bottom: 0.5rem;
+}
+
+.definition-item p {
+  margin: 0;
+}
+
+.example {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.word-group {
+  margin: 0 0 0.4rem;
+}

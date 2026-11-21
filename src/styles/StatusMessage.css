@@ -1,0 +1,31 @@
+.status-message {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  background: var(--white);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  color: var(--text-muted);
+}
+
+.status-message p {
+  margin: 0;
+}
+
+.status-title {
+  font-size: 1.15rem;
+  color: var(--text);
+}
+
+.status-message.error {
+  border: 1px solid var(--danger);
+  background: #fef2f2;
+}
+
+.status-message.error .status-title {
+  color: var(--danger);
+}
+
+.status-message.loading .status-title {
+  color: var(--accent);
+}

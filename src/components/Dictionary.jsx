@@ -10,35 +10,37 @@ function Dictionary({ savedWords, onSaveWord, onRemoveWord }) {
   const [wordEntry, setWordEntry] = useState(null);
   const [status, setStatus] = useState("empty");
 
-  async function fetchWord(word) {
-    setStatus("loading");
-    setWordEntry(null);
+  useEffect(() => {
+    if (searchedWord === "") {
+      return;
+    }
 
-    try {
-      const response = await fetch(
-        `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
-      );
+    async function fetchWord() {
+      setStatus("loading");
+      setWordEntry(null);
 
-      if (response.status === 404) {
-        setStatus("notfound");
-      } else if (response.ok) {
-        const data = await response.json();
-        setWordEntry(data[0]);
-        setStatus("success");
-      } else {
+      try {
+        const response = await fetch(
+          `https://api.dictionaryapi.dev/api/v2/entries/en/${searchedWord}`
+        );
+
+        if (response.status === 404) {
+          setStatus("notfound");
+        } else if (response.ok) {
+          const data = await response.json();
+          setWordEntry(data[0]);
+          setStatus("success");
+        } else {
+          setStatus("error");
+        }
+      } catch (error) {
         setStatus("error");
       }
-    } catch (error) {
-      setStatus("error");
+
+      setSearchedWord("");
     }
 
-    setSearchedWord("");
-  }
-
-  useEffect(() => {
-    if (searchedWord !== "") {
-      fetchWord(searchedWord);
-    }
+    fetchWord();
   }, [searchedWord]);
 
   function handleSearch() {

@@ -27,7 +27,7 @@ function Dictionary({ savedWords, onSaveWord, onRemoveWord }) {
         if (response.status === 404) {
           setStatus("notfound");
         } else if (response.ok) {
-          const data = await response.json();
+          const data = await response.json(); // response.json() reads the body and parses it from a JSON text string into JavaScript objects
           setWordEntry(data[0]);
           setStatus("success");
         } else {
@@ -50,7 +50,7 @@ function Dictionary({ savedWords, onSaveWord, onRemoveWord }) {
     }
   }
 
-  const isSaved = wordEntry
+  const isSaved = wordEntry // checks if the searched word is already saved or not
     ? savedWords.some((savedWord) => savedWord.word === wordEntry.word)
     : false;
 
